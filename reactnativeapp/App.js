@@ -13,14 +13,20 @@ import {
 } from 'react-native';
 import ExampleComponent from './src/components/_ExampleComponent';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <ExampleComponent/>
       </View>
     );
   }
 }
 
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center'
+  }
+});
